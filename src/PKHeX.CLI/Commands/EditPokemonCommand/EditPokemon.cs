@@ -17,6 +17,7 @@ public static class EditPokemon
         {
             IEnumerable<EditPokemonAttribute> attributes =
             [
+                new Legal(pokemon),
                 new EditPokemonAttribute.ReadOnlyAttribute(pokemon, "PID", () => pokemon.PID.ToString("X8")),
                 new EditPokemonAttribute.IsShiny(pokemon),
                 new EditPokemonAttribute.Name(pokemon),
